@@ -1,0 +1,22 @@
+.container{    
+    display: flex;
+    justify-content: center;    
+}
+.container-category-card{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color:red;
+    margin-right:10px;
+    margin-left:10px;
+    width:250px;
+    margin-bottom:25px;
+    text-decoration: none;
+}
+.container-category-card:hover{
+    background-color: white;    
+}
+
+.container-category-card{    
+    border: 2px solid white;    
+}

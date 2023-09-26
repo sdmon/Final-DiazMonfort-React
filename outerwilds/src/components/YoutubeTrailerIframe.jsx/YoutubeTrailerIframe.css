@@ -1,0 +1,13 @@
+.video-responsive {    
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin-top:25px;      
+  }  
+
+.video-responsive iframe{       
+    border: 3px solid orange;  
+}
+.video-responsive iframe:hover{
+    border: 3px solid white;
+}

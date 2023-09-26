@@ -1,0 +1,11 @@
+.card-prod-container{
+    border: 3px solid #FFB43B; 
+}
+.card-prod-container:hover{
+    border: 5px solid white;
+}
+.card-prod-img{
+    width:100%;
+    max-width: 100%;
+    height: 60%;    
+}
