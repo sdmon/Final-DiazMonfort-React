@@ -1,6 +1,6 @@
 [
     {
-      "id": 1,
+      "id": "KesXqqigNIyd0o4zXxjA",
       "imageUrl": "https://i.imgur.com/uIpV3D2.png",
       "title": "Remera Outer Wilds Ventures",
       "price": 5000,
@@ -8,15 +8,15 @@
       "stock": 5
     },
     {
-      "id": 2,
+      "id": "hLwSfkTP6jjrew0PB5uC",
       "imageUrl": "https://i.imgur.com/IW6x6H6.png",
-      "title": "Buzo Outer Wilds Ventures",
-      "category": "Buzos",
-      "price": 12000,      
+      "title": "Buzo Outer Wilds Ventures",      
+      "price": 12000,
+      "category": "Buzos",      
       "stock": 8
     },
     {
-      "id": 3,
+      "id": "kgNVzlYO7atEK8BAMJ3j",
       "imageUrl": "https://i.imgur.com/r9W8wls.png",
       "title": "Campera Outer Wilds Ventures",
       "price": 14500,
@@ -24,7 +24,7 @@
       "stock": 10
     },
     {
-      "id": 4,
+      "id": "xuyBE34OVM9Qr7fJYQY7",
       "imageUrl": "https://i.imgur.com/KIgfNj8.png",
       "title": "Remera Nomai",
       "price": 5000,

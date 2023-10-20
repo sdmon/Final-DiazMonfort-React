@@ -1,8 +1,10 @@
 import { Modal, Typography } from "@mui/material";
 import ItemCount from "../common/ItemCount"
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { useCartContext } from "../../context/CartContext";
 const ProductInfo = ({ product, open, setOpen }) => {
-    const { imageUrl, title, price, stock } = product
+    const { id, imageUrl, title, price, stock } = product
+    const { addToCart } = useCartContext();
     const [quantityInCart, setQuantityInCart] = useState(0);
 
 
@@ -11,7 +13,10 @@ const ProductInfo = ({ product, open, setOpen }) => {
     }
     
     const handleAddToCart = (count) => {
-        setQuantityInCart(count);        
+        setQuantityInCart(count); 
+        if ( count > 0 ) {
+            addToCart({id, title, imageUrl, price, quantity:count})
+        }       
     };
 
     return (<>

@@ -1,12 +1,22 @@
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import './CartWidget.css'
-
+import { Typography } from '@mui/material';
+import { useCartContext } from '../../context/CartContext';
 const CartWidget = () => {
+    const { cart } = useCartContext();
+    const cartCount = cart.items.length;
+    
     return (
-        <>
-            <AddShoppingCartIcon sx={{ marginLeft: '7px', fontSize: '40px'}} /><span style={{fontSize:'20px'}}>1</span>
-        </>)
+        <div style={{ display: "flex", alignItems: "center" }}>
+            <AddShoppingCartIcon style={{ fontSize:'25px'}}/>
+            <Typography style={{ fontSize:'25px'}}>{cartCount}</Typography>
+        </div>
+    );
 }
- 
+
 export default CartWidget;
+
+
+
+
+
 

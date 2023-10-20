@@ -1,6 +1,6 @@
 import CartWidget from '../CartWidget/CartWidget';
 import './Navbar.css';
-import { AppBar, Toolbar, Button, Typography } from '@mui/material';
+import { AppBar, Toolbar } from '@mui/material';
 import logo from '../../assets/logo.png'
 import { NavLink } from "react-router-dom";
 
@@ -21,7 +21,9 @@ const Navbar = () => {
             <NavLink className="navbar-link" to="/products">
                 Productos
             </NavLink>            
-            <CartWidget />                   
+            <NavLink className="navbar-link" to="/cart">
+                    <CartWidget />
+            </NavLink>                   
         </Toolbar>
 
     </AppBar>);   

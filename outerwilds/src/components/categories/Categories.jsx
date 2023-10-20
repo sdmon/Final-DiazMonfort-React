@@ -1,14 +1,28 @@
 
 import { Card, CardContent, CircularProgress, Typography } from "@mui/material"
 import './Categories.css'
-import useAsyncMock from "../../hooks/useAsyncMock";
-import categories from "../../mocks/categories.json"
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { collection, getDocs, getFirestore } from 'firebase/firestore';
 
 
 const Categories = () => {
     
-    const { data, loading } = useAsyncMock(categories)
+    const [ data, setData ] = useState([]) 
+    const [ loading, setLoading ] = useState(true)   
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const database = getFirestore()
+            const querySnapshot = await getDocs(collection(database, 'categories'))
+            const newData = querySnapshot.docs.map((doc) => (
+                {id: doc.id , ...doc.data()}
+            ))
+            setData(newData)
+            setLoading(false)
+        }
+        fetchData()
+    }, [])
 
     if (loading) { return <div style={{display: 'flex', justifyContent: 'center'}}><CircularProgress /></div> }
 
