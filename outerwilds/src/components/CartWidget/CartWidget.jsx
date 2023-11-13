@@ -3,12 +3,12 @@ import { Typography } from '@mui/material';
 import { useCartContext } from '../../context/CartContext';
 const CartWidget = () => {
     const { cart } = useCartContext();
-    const cartCount = cart.items.length;
-    
+    const totalCount = cart.items ? cart.items.reduce((total, item) => total + item.quantity, 0) : 0;
+
     return (
         <div style={{ display: "flex", alignItems: "center" }}>
-            <AddShoppingCartIcon style={{ fontSize:'25px'}}/>
-            <Typography style={{ fontSize:'25px'}}>{cartCount}</Typography>
+            <AddShoppingCartIcon style={{ fontSize: '25px' }} />
+            <Typography style={{ fontSize: '25px' }}>{totalCount}</Typography>
         </div>
     );
 }

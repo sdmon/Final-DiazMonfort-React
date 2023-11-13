@@ -10,6 +10,8 @@ import CategoriesProductList from './components/categories/CategoriesProductList
 import YoutubeTrailerIframe from './components/YoutubeTrailerIframe.jsx/YoutubeTrailerIframe'
 import CartProvider, { CartContext } from './context/CartContext'
 import Cart from './components/Cart/Cart'
+import Order from './components/Checkout/Order'
+import Checkout from './components/Checkout/Checkout'
 
 
 
@@ -26,7 +28,9 @@ function App() {
           <Route exact path="/categories" element={<Categories/>} />
           <Route exact path="/products" element={<><Categories/><ProductList/></>} />   
           <Route exact path="/categories/:categoryId" element={<><Categories/><CategoriesProductList/></>}/>  
-          <Route exact path="/cart" element={<Cart />} />     
+          <Route exact path="/cart" element={<Cart />} />  
+          <Route exact path="/cart/checkout" element={<Checkout />} />   
+          <Route exact path="cart/checkout/:orderId" element={<Order/>}></Route>
         </Routes> 
         <Footer />        
       </Router>
